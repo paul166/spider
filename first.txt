@@ -1,0 +1,274 @@
+
+paul@paul-pc MINGW64 ~/Desktop
+$ cd ~/.ssh
+bash: cd: /c/Users/paul/.ssh: No such file or directory
+
+paul@paul-pc MINGW64 ~/Desktop
+$
+
+paul@paul-pc MINGW64 ~/Desktop
+$ cd ~/.ssh
+bash: cd: /c/Users/paul/.ssh: No such file or directory
+
+paul@paul-pc MINGW64 ~/Desktop
+$ git config --global user.name 'paul'
+
+paul@paul-pc MINGW64 ~/Desktop
+$ git config --global user.eamil '1922582827@qq.com'
+
+paul@paul-pc MINGW64 ~/Desktop
+$ cd e:\
+>
+
+paul@paul-pc MINGW64 /e
+$ cd github
+
+paul@paul-pc MINGW64 /e/github
+$ madir data-analysis
+bash: madir: command not found
+
+paul@paul-pc MINGW64 /e/github
+$ mkdir data-analysis
+
+paul@paul-pc MINGW64 /e/github
+$ cd data-analysis/
+
+paul@paul-pc MINGW64 /e/github/data-analysis
+$ git init
+Initialized empty Git repository in E:/github/data-analysis/.git/
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ ls
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ ls -a
+./  ../  .git/
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ ls
+first.txt
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        first.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git add first.txt
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   first.txt
+
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git commit -m 'create the first.txt'
+[master (root-commit) 7eabb30] create the first.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.txt
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ ls
+first.txt
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ ls
+first.txt  second.txt  third.txt
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git add --all
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   second.txt
+        new file:   third.txt
+
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git add '*.txt'
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   second.txt
+        new file:   third.txt
+
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git commit -m 'add second and third files'
+[master 6ea143f] add second and third files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 second.txt
+ create mode 100644 third.txt
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ ^C
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git log
+commit 6ea143ffd09d866e5fae40286f56e98889d99275 (HEAD -> master)
+Author: paul <1922582827@qq.com>
+Date:   Mon Dec 3 14:43:17 2018 +0800
+
+    add second and third files
+
+commit 7eabb30cf728b865aeaef8aaa795b06a8e9f2e4a
+Author: paul <1922582827@qq.com>
+Date:   Mon Dec 3 14:38:49 2018 +0800
+
+    create the first.txt
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git log --summsry
+fatal: unrecognized argument: --summsry
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git log --summary
+commit 6ea143ffd09d866e5fae40286f56e98889d99275 (HEAD -> master)
+Author: paul <1922582827@qq.com>
+Date:   Mon Dec 3 14:43:17 2018 +0800
+
+    add second and third files
+
+ create mode 100644 second.txt
+ create mode 100644 third.txt
+
+commit 7eabb30cf728b865aeaef8aaa795b06a8e9f2e4a
+Author: paul <1922582827@qq.com>
+Date:   Mon Dec 3 14:38:49 2018 +0800
+
+    create the first.txt
+
+ create mode 100644 first.txt
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ ssh-keygen -t rsa -C '1922582827@qq.com'
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/paul/.ssh/id_rsa):
+Created directory '/c/Users/paul/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/paul/.ssh/id_rsa.
+Your public key has been saved in /c/Users/paul/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:u76X+66MJ0I/8pWokwNBZ++poQk3FpLWDS2E3AqEIE8 1922582827@qq.com
+The key's randomart image is:
++---[RSA 2048]----+
+|*oE+..           |
+|+oo = +          |
+| ..= * .         |
+|  = + . .        |
+| . . o .S.       |
+|  . = o oo .     |
+|   + * =o o.     |
+|    o B.+=+      |
+|      .B**+=o    |
++----[SHA256]-----+
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git remote add origin https://github.com/paul166/data-analysis.git
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git push -u origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com':
+remote: Anonymous access to paul166/data-analysis.git denied.
+fatal: Authentication failed for 'https://github.com/paul166/data-analysis.git/'
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git push -u origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': paul166
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/paul166/data-analysis.git/'
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 430 bytes | 215.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/paul166/data-analysis/pull/new/master
+remote:
+To https://github.com/paul166/data-analysis.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/paul166/data-analysis
+ * branch            master     -> FETCH_HEAD
+   6ea143f..92af34a  master     -> origin/master
+Updating 6ea143f..92af34a
+Fast-forward
+ fourth | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fourth
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$ git pull origin master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), done.
+From https://github.com/paul166/data-analysis
+ * branch            master     -> FETCH_HEAD
+   92af34a..e60ccd9  master     -> origin/master
+Updating 92af34a..e60ccd9
+Fast-forward
+ fourth => fourth.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename fourth => fourth.txt (100%)
+
+paul@paul-pc MINGW64 /e/github/data-analysis (master)
+$
