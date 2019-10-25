@@ -1,0 +1,15 @@
+setup.py
+jdbook/__init__.py
+jdbook/items.py
+jdbook/middlewares.py
+jdbook/pipelines.py
+jdbook/settings.py
+jdbook/spiders/__init__.py
+jdbook/spiders/amazon.py
+jdbook/spiders/dangdang.py
+jdbook/spiders/jd.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
